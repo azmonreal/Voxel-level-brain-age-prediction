@@ -1,7 +1,6 @@
 from monai.transforms.post.array import AsDiscrete
 from monai.transforms.compose import Compose
 from monai.transforms.utility.array import EnsureType
-from main import *
 
 
 post_segpred = Compose([EnsureType("tensor", device="cpu")])
@@ -20,4 +19,3 @@ global_step = 0
 global_step_best = 0
 
 eval_num = 1
-
